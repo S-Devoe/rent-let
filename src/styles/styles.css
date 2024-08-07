@@ -72,3 +72,13 @@
 .bold-paragraph {
   color: rgb(141, 149, 152);
 }
+
+.home-reserve {
+  position: relative;
+  background-image: url(/home/home.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 35rem;
+  z-index: 1;
+}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HousingCard from "@/components/cards/house-card";
 
 const HomeFromHome = () => {
   return (
@@ -14,38 +14,16 @@ const HomeFromHome = () => {
 
       <div className="grid w-full grid-cols-3 gap-8 container__two mt-8">
         {details?.map((item, i) => (
-          <div
+          <HousingCard
             key={i + 1}
-            className="w-full border border-lightBlack/50 rounded"
-          >
-            <Image
-              src={item.image}
-              alt={item.location}
-              height={200}
-              width={500}
-              className="h-[200px] w-full rounded-t"
-              sizes="100%"
-            />
-            <div className="w-full py-4 px-3">
-              <h2 className="text-xl text-black font-semibold">{item?.name}</h2>
-
-              <div className="flex flex-col gap-1 my-2">
-                <span className="text-sm text-gray-500">
-                  Bedrooms: {item?.bedrooms}
-                </span>
-                <span className="text-sm text-gray-500">
-                  Bathrooms: {item?.bathrooms}
-                </span>
-                <span className="text-sm text-gray-500">
-                  Kitchen: {item?.kitchen}
-                </span>
-              </div>
-
-              <div className="mt-3 text-base text-black font-medium">
-                {item?.location}
-              </div>
-            </div>
-          </div>
+            bathrooms={item?.bathrooms}
+            bedrooms={item?.bedrooms}
+            name={item?.name}
+            image={item?.image}
+            kitchen={item?.kitchen}
+            location={item?.location}
+            price={item?.price}
+          />
         ))}
       </div>
     </section>

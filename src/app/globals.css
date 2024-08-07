@@ -7,7 +7,7 @@
     --fontFamily-PP: "Montserrat", sans-serif;
     --fontFamily-MM: "Montserrat", sans-serif;
     --header-height: 5rem;
-    --primaryColor: #eda075;
+    --primary: 352 82% 65%; /* #ef5a6f */
     --backgroundColor: #f7f6f6;
     --whiteColor: #fff;
     --blackColor: #000;
@@ -21,7 +21,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
+
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;

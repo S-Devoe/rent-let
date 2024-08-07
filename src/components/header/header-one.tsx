@@ -1,7 +1,31 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const HeaderOne = () => {
+  const pathname = usePathname();
+
+  const nav = [
+    {
+      title: "Home",
+      link: "/",
+      isActive: pathname === "/",
+    },
+    {
+      title: "Residences",
+      link: "#",
+    },
+    {
+      title: "Beach House",
+      link: "#",
+      isActive: pathname?.startsWith("/beach-house"),
+    },
+    {
+      title: "Contact Us",
+      link: "#",
+      isActive: pathname?.startsWith("/contant"),
+    },
+  ];
   return (
     <header className="header__one">
       <div className="container__one px-0">
@@ -10,7 +34,9 @@ const HeaderOne = () => {
           {nav?.map((item, i) => (
             <Link
               href={item?.link}
-              className="font-semibold text-black text-sm"
+              className={`font-semibold ${
+                item?.isActive ? "text-primary" : "text-black"
+              } text-sm`}
               key={i + 1}
             >
               {item?.title}
@@ -23,22 +49,3 @@ const HeaderOne = () => {
 };
 
 export default HeaderOne;
-
-const nav = [
-  {
-    title: "Home",
-    link: "#",
-  },
-  {
-    title: "Residences",
-    link: "#",
-  },
-  {
-    title: "Beach House",
-    link: "#",
-  },
-  {
-    title: "Contact Us",
-    link: "#",
-  },
-];

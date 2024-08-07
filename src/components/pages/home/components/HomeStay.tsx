@@ -1,3 +1,4 @@
+import { LocationIcon } from "@/components/icons/icon";
 import Image from "next/image";
 
 const HomeStay = () => {
@@ -23,8 +24,8 @@ const HomeStay = () => {
               className="h-[200px] w-full rounded-lg"
               sizes="100%"
             />
-            <div className="mt-3 text-base text-black font-medium">
-              {item?.location}
+            <div className="mt-3 text-base text-black font-medium flex items-center gap-1">
+              <LocationIcon className="text-primary size-5" /> {item?.location}
             </div>
           </div>
         ))}
