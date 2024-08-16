@@ -260,3 +260,40 @@ export function SolidLocation(props: IconProps) {
     </svg>
   );
 }
+
+export function HamburgerMenu(props: IconProps) {
+  return (
+    <svg
+      fill="none"
+      strokeWidth="2"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M3 12 21 12"></path>
+      <path d="M3 6 21 6"></path>
+      <path d="M3 18 21 18"></path>
+    </svg>
+  );
+}
+
+export default function CloseIcon(props: IconProps) {
+  return (
+    <svg
+      fill="currentColor"
+      strokeWidth="0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34Z"></path>
+    </svg>
+  );
+}

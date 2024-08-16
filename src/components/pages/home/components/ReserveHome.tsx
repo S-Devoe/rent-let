@@ -7,15 +7,15 @@ import { FormEvent, useRef } from "react";
 
 const ReserveHome = () => {
   return (
-    <section className="w-full flex justify-center items-center">
-      <section className="container__two flex gap-10">
+    <section className="w-full flex justify-center items-center p-6">
+      <section className="container__two flex flex-col-reverse lg:flex-row gap-10">
         <div className="home-reserve flex-1 flex items-center justify-center rounded">
-          <div className="bg-white w-full py-10 px-14 z-5 flex flex-col gap-3">
+          <div className="bg-white w-full py-10 md:px-14 z-5 flex flex-col gap-3">
             {/* address  */}
             <div className="flex items-center gap-2">
               <LocationIcon className="text-primary size-5" />
               <p className="text-black font-medium text-base">
-                Name, adddress, Lagos, Nigeria
+                Haven Homes, Lagos, Nigeria
               </p>
             </div>
             {/* tel   */}
@@ -81,7 +81,7 @@ function FormSection() {
           placeholder="Full Name"
           ref={fullNameRef}
         />
-        <div className="flex gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <Input
             name="email"
             type="email"
@@ -96,8 +96,6 @@ function FormSection() {
             type="tel"
             ref={phoneRef}
           />
-        </div>
-        <div className="flex gap-4">
           <Input
             name="eventType"
             required
@@ -112,6 +110,7 @@ function FormSection() {
             type="number"
           />
         </div>
+
         <Textarea
           name="description"
           placeholder="Event description"

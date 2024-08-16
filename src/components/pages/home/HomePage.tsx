@@ -6,7 +6,7 @@ import ReserveHome from "./components/ReserveHome";
 
 const HomePage = () => {
   return (
-    <main className="space-y-40">
+    <main className="space-y-20 lg:space-y-40">
       <HomeHero />
       <HomeStay />
       <HomeFromHome />

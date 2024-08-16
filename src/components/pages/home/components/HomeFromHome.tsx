@@ -3,7 +3,7 @@ import { generateUniqueId } from "@/lib/utils";
 
 const HomeFromHome = () => {
   return (
-    <section className="w-full flex justify-center items-center flex-col">
+    <section className="w-full flex justify-center items-center flex-col p-6">
       <div className="container__two">
         <p className="bold-paragraph text-center !text-black !font-semibold">
           Residence
@@ -13,7 +13,7 @@ const HomeFromHome = () => {
         </h2>
       </div>
 
-      <div className="grid w-full grid-cols-3 gap-8 container__two mt-8">
+      <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 gap-8 container__two mt-8">
         {details?.map((item, i) => (
           <HousingCard
             key={i + 1}

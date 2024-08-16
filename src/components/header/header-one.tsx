@@ -3,9 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/assets/haven-logo.png";
+import { HamburgerMenu } from "../icons/icon";
+import HamburgerDrawer from "../sheet/mobile-menu-sheet";
+import { useState } from "react";
 
 const HeaderOne = () => {
   const pathname = usePathname();
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const nav = [
     {
@@ -20,13 +24,13 @@ const HeaderOne = () => {
     },
     {
       title: "Beach House",
-      link: "#",
+      link: "/beach-house",
       isActive: pathname?.startsWith("/beach-house"),
     },
     {
       title: "Contact Us",
-      link: "#",
-      isActive: pathname?.startsWith("/contant"),
+      link: "/contact",
+      isActive: pathname?.startsWith("/contact"),
     },
   ];
   return (
@@ -41,7 +45,19 @@ const HeaderOne = () => {
             className="h-20 w-20"
           />
         </Link>
-        <div className="flex items-center gap-8">
+        <button
+          className="md:hidden"
+          type="button"
+          onClick={() => setOpenDrawer(true)}
+          aria-label='open menu'
+        >
+          <HamburgerMenu className="size-6 text-black md:hidden" />
+        </button>
+        <HamburgerDrawer
+          open={openDrawer}
+          onClose={() => setOpenDrawer(false)}
+        />
+        <div className="hidden md:flex items-center gap-8">
           {nav?.map((item, i) => (
             <Link
               href={item?.link}

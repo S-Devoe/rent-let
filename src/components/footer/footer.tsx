@@ -6,8 +6,8 @@ import Logo from "@/assets/haven-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-primary/10 flex justify-center mt-20 py-10">
-      <div className="container__two flex gap-10 justify-between lg:mx-28">
+    <footer className="w-full bg-primary/10 flex  justify-center mt-20 px-6 py-10">
+      <div className="container__two flex flex-col md:flex-row gap-10 justify-between lg:mx-28">
         <div className="">
           <Link href="/">
             <Image
@@ -76,11 +76,11 @@ const link = [
 
 const link2 = [
   {
-    link: "#",
+    link: "/beach-house",
     title: "Beach House",
   },
   {
-    link: "#",
+    link: "/residence",
     title: "Residence",
   },
 ];

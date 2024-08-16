@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const HomeBeachHouse = () => {
   return (
-    <section className="bg-gray-100 full">
-      <div className="container__two mx-auto flex items-center gap-4 py-20">
+    <section className="bg-gray-100 p-6">
+      <div className="container__two mx-auto flex flex-col md:flex-row items-center gap-4 py-20">
         <div className="flex-1 flex flex-col">
           <div className="flex items-center gap-2">
             <span className="w-10 bg-primary rounded h-[2px]" />
@@ -16,7 +16,7 @@ const HomeBeachHouse = () => {
               A Haven for Relaxation
             </h2>
             <p className="text-base font-medium text-black mt-5 leading-8">
-              Name, is a remarkable four-bedroom luxury beach house in Lagos,
+              Haven Homes is a remarkable four-bedroom luxury beach house in Lagos,
               nestled within a culturally rich enclave. <br /> As one of
               Nigeria&apos;s finest beach houses, this elegant and luxurious
               retreat boasts an exquisite interior design and state-of-the-art
@@ -35,7 +35,7 @@ const HomeBeachHouse = () => {
             <ArrowRightIcon className="h-5 w-5" />
           </Link>
         </div>
-        <div className="flex-1 w-full">
+        <div className="flex-1 hidden lg:block w-full">
           <Image
             src="/home/home-beach.jpg"
             alt="Beach House"

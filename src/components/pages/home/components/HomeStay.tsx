@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const HomeStay = () => {
   return (
-    <section className="w-full flex justify-center items-center flex-col">
+    <section className="w-full flex justify-center items-center flex-col p-6">
       <div className="container__two">
         <h2 className="subtitle text-center">
           Hello, where would you like your next stay to be?
         </h2>
-        <p className="bold-paragraph text-center">
+        <p className="bold-paragraph text-center mt-1">
           Choose any of our Residence locations listed below.
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-3 gap-8 container__two mt-8">
+      <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 gap-8 container__two mt-8">
         {arr?.map((item, i) => (
           <div key={i + 1} className="">
             <Image

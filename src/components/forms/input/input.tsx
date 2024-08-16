@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import {
   HTMLInputTypeAttribute,
   forwardRef,
@@ -15,6 +16,7 @@ interface Props {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   type?: HTMLInputTypeAttribute;
+  className?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(
@@ -28,6 +30,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
       value,
       disabled,
       type = "text",
+      className,
     },
     ref
   ) => {
@@ -46,7 +49,10 @@ const Input = forwardRef<HTMLInputElement, Props>(
           disabled={disabled}
           value={value}
           onChange={onChange}
-          className="w-full p-2 rounded-sm border-[2px] border-gray-300 focus-within:outline-none focus-within:border-primary placeholder:text-black/50 text-black"
+          className={cn(
+            "w-full p-2 rounded-sm border-[2px] border-gray-300 focus-within:outline-none focus-within:border-primary placeholder:text-black/50 text-black",
+            className
+          )}
           ref={inputRef}
         />
       </div>

@@ -4,7 +4,7 @@ import ResidenceInfoHero from "./ResidenceInfoHero";
 
 const ResidenceInfoPage = () => {
   return (
-    <main className="space-y-40">
+    <main className="space-y-10 lg:space-y-40">
       <ResidenceInfoHero />
       <ResidenceAmenities />
       <ReserveHome />

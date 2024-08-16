@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
 interface Props {
@@ -9,10 +10,11 @@ interface Props {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  className?: string;
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
-  ({ name, label, required, placeholder, disabled }, ref) => {
+  ({ name, label, required, placeholder, disabled, className }, ref) => {
     const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
     useImperativeHandle(ref, () => textAreaRef.current!);
@@ -25,7 +27,10 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           required={required}
           placeholder={placeholder}
           disabled={disabled}
-          className="w-full resize-none p-2 rounded-sm border-[2px] h-[100px] border-gray-300 focus-within:outline-none focus-within:border-primary placeholder:text-black/50 text-black"
+          className={cn(
+            "w-full resize-none p-2 rounded-sm border-[2px] h-[100px] border-gray-300 focus-within:outline-none focus-within:border-primary placeholder:text-black/50 text-black",
+            className
+          )}
           ref={textAreaRef}
         />
       </div>

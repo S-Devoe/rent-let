@@ -10,6 +10,16 @@
   box-shadow: 0 -1px 6px #00000029;
 }
 
+@media only screen and (max-width: 600px) {
+  .header__one {
+    padding: 0 1rem;
+  }
+
+  .home-header-hero {
+    padding: 1.5rem !important;
+  }
+}
+
 .header__one::before {
   content: "";
   position: absolute;
@@ -46,6 +56,12 @@
   z-index: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .home-header-hero {
+    height: 80vh;
+  }
+}
+
 .home-header-container {
   max-width: var(--maxWidth);
   color: var(--whiteColor);
@@ -62,11 +78,19 @@
   margin: 0;
   font-size: calc(10px + 6.8vmin);
   font-weight: 700;
+  line-height: normal;
 }
 
 .subtitle {
   font-size: 2.35rem;
   font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 
 .bold-paragraph {
@@ -81,4 +105,14 @@
   background-repeat: no-repeat;
   height: 35rem;
   z-index: 1;
+}
+
+.beach-house-bg {
+  position: relative;
+  background-image: url(/beach/beach-house.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  box-shadow: inset 0 0 0 2000px rgba(68, 57, 57, 0.603);
 }

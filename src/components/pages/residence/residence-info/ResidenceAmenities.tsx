@@ -4,7 +4,7 @@ import React from "react";
 
 const ResidenceAmenities = () => {
   return (
-    <section className="w-full flex justify-center">
+    <section className="w-full flex justify-center p-6">
       <section className="flex flex-col gap-2 container__two">
         {amenities?.map((item) => (
           <div className="flex items-center gap-3" key={item?.id}>
@@ -12,7 +12,7 @@ const ResidenceAmenities = () => {
             <p className="text-black font-semibold text-base">{item.amenity}</p>
           </div>
         ))}
-        <Button className="w-fit text-base rounded-lg mt-3">Book Now</Button>
+        <Button className="w-fit px-10 text-base rounded-lg mt-3">Book Now</Button>
       </section>
     </section>
   );

@@ -4,7 +4,7 @@ import ResidenceHomes from "./ResidenceHomes";
 
 const ResidencePage = () => {
   return (
-    <main className="space-y-40">
+    <main className="space-y-10 lg:space-y-40">
       <ResidenceHero />
       <ResidenceHomes />
       <ReserveHome />
