@@ -1,15 +1,17 @@
 import HousingCard from "@/components/cards/house-card";
-import { generateUniqueId } from "@/lib/utils";
+import React from "react";
+import { details } from "../home/components/HomeFromHome";
+import { HomeModern } from "@/components/icons/icon";
 
-const HomeFromHome = () => {
+const ResidenceHomes = () => {
   return (
     <section className="w-full flex justify-center items-center flex-col">
       <div className="container__two">
-        <p className="bold-paragraph text-center !text-black !font-semibold">
-          Residence
-        </p>
-        <h2 className="subtitle text-center">
-          Choose any of our Residence locations listed below.
+        <h2 className="capitalize text-lg font-semibold flex items-center gap-1">
+          <span>
+            <HomeModern className="text-primary" />
+          </span>
+          {details?.length} residence available
         </h2>
       </div>
 
@@ -32,15 +34,4 @@ const HomeFromHome = () => {
   );
 };
 
-export default HomeFromHome;
-
-export const details = Array(4).fill({
-  name: "Residence",
-  location: "Lagos, Nigeria",
-  bedrooms: 3,
-  bathrooms: 2,
-  kitchen: 1,
-  price: "From ₦ 500,000",
-  image: "/home/location.jpg",
-  id: generateUniqueId(),
-});
+export default ResidenceHomes;

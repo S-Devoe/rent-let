@@ -112,7 +112,7 @@ export function Facebook(props: IconProps) {
   return (
     <svg
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       height="1em"
@@ -128,7 +128,7 @@ export function TwitterCircle(props: IconProps) {
   return (
     <svg
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       height="1em"
@@ -144,7 +144,7 @@ export function Instagram(props: IconProps) {
   return (
     <svg
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       height="1em"
@@ -160,7 +160,7 @@ export function BedOutline(props: IconProps) {
   return (
     <svg
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       height="1em"
@@ -191,7 +191,7 @@ export function ToolKitchen(props: IconProps) {
   return (
     <svg
       fill="none"
-      stroke-width="2"
+      strokeWidth="2"
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
@@ -211,7 +211,7 @@ export function Bath(props: IconProps) {
   return (
     <svg
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       height="1em"
@@ -219,6 +219,44 @@ export function Bath(props: IconProps) {
       {...props}
     >
       <path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path>
+    </svg>
+  );
+}
+
+export function HomeModern(props: IconProps) {
+  return (
+    <svg
+      fill="none"
+      strokeWidth="0"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+      ></path>
+    </svg>
+  );
+}
+
+export function SolidLocation(props: IconProps) {
+  return (
+    <svg
+      fill="currentColor"
+      strokeWidth="0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2 12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
     </svg>
   );
 }

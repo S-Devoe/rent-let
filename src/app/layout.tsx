@@ -5,7 +5,10 @@ import "../styles/styles.css";
 import HeaderOne from "@/components/header/header-one";
 import Footer from "@/components/footer/footer";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  variable: "--font-mont",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",

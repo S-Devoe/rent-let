@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "@/assets/haven-logo.png";
 
 const HeaderOne = () => {
   const pathname = usePathname();
@@ -13,7 +15,8 @@ const HeaderOne = () => {
     },
     {
       title: "Residences",
-      link: "#",
+      link: "/residence",
+      isActive: pathname?.startsWith("/residence"),
     },
     {
       title: "Beach House",
@@ -29,7 +32,15 @@ const HeaderOne = () => {
   return (
     <header className="header__one">
       <div className="container__one px-0">
-        <span>Logo</span>
+        <Link href="/">
+          <Image
+            src={Logo}
+            alt="logo"
+            height={40}
+            width={40}
+            className="h-20 w-20"
+          />
+        </Link>
         <div className="flex items-center gap-8">
           {nav?.map((item, i) => (
             <Link

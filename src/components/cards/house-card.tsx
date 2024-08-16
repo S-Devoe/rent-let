@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Bath, BedOutline, LocationIcon, ToolKitchen } from "../icons/icon";
+import Link from "next/link";
 
 interface Props {
   image: string;
@@ -10,6 +11,7 @@ interface Props {
   kitchen: number;
   name: string;
   price: string;
+  id: string | number;
 }
 
 const HousingCard = ({
@@ -20,6 +22,7 @@ const HousingCard = ({
   location,
   name,
   price,
+  id,
 }: Props) => {
   return (
     <div className="w-full border border-lightBlack/50 rounded">
@@ -51,7 +54,9 @@ const HousingCard = ({
 
         <h3 className="text-xl text-black font-semibold mt-2">{price}</h3>
         <div className="w-full flex items-center gap-3  mt-1">
-          <Button variant="outline">View More Details</Button>
+          <Button variant="outline" asChild>
+            <Link href={`/residence/${id}`}>View More Details </Link>
+          </Button>
           <Button>Book Now</Button>
         </div>
       </div>
