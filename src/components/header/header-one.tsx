@@ -33,6 +33,7 @@ const HeaderOne = () => {
       isActive: pathname?.startsWith("/contact"),
     },
   ];
+  
   return (
     <header className="header__one">
       <div className="container__one px-0">
