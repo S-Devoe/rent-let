@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/assets/haven-logo.png";
+import Logo from "@/assets/images/haven-logo.png";
 import CloseIcon from "../icons/icon";
 import { usePathname } from "next/navigation";
 
