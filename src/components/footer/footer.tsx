@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, Instagram, TwitterCircle } from "../icons/icon";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/haven-logo.PNG";
+import Logo from "@/assets/images/haven-logo.png";
 
 const Footer = () => {
   return (

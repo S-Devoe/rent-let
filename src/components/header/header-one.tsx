@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "@/assets/haven-logo.png";
+import Logo from "@/assets/images/haven-logo.png";
 import { HamburgerMenu } from "../icons/icon";
 import HamburgerDrawer from "../sheet/mobile-menu-sheet";
 import { useState } from "react";
@@ -33,7 +33,7 @@ const HeaderOne = () => {
       isActive: pathname?.startsWith("/contact"),
     },
   ];
-  
+
   return (
     <header className="header__one">
       <div className="container__one px-0">
