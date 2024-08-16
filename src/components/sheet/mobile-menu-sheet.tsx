@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   Sheet,
   SheetContent,
@@ -50,13 +50,13 @@ const HamburgerDrawer = ({ open, onClose }: Props) => {
         className="pt-0 px-0 pb-0 flex flex-col z-[1009] w-full "
       >
         <SheetTitle className="sr-only" aria-describedby="mobile view drawer">
-          mobile view drawer{" "}
+          mobile view drawer
         </SheetTitle>
         <SheetDescription
           className="sr-only"
           aria-describedby="mobile view drawer"
         >
-          mobile view drawer{" "}
+          mobile view drawer
         </SheetDescription>
         <section className="px-6 mt-4 ">
           <div className="flex items-center justify-between" onClick={onClose}>
@@ -77,7 +77,10 @@ const HamburgerDrawer = ({ open, onClose }: Props) => {
               </>
             </SheetClose>
           </div>
-          <div className="mt-8 items-start flex flex-col gap-8" onClick={onClose}>
+          <div
+            className="mt-8 items-start flex flex-col gap-8"
+            onClick={onClose}
+          >
             {nav?.map((item, i) => (
               <Link
                 href={item?.link}
