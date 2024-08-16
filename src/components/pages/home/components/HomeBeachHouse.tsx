@@ -20,7 +20,7 @@ const HomeBeachHouse = () => {
               nestled within a culturally rich enclave. <br /> As one of
               Nigeria&apos;s finest beach houses, this elegant and luxurious
               retreat boasts an exquisite interior design and state-of-the-art
-              amenities, including indoor pools for discerning guests. <br />{" "}
+              amenities, including indoor pools for discerning guests. <br />
               Enjoy beachside comfort with activities like sunbathing, massage
               sessions, yoga stretches, or picnics at our secluded beachfront
               area, which offers stunning views of the Ilashe beachfront and
