@@ -13,7 +13,7 @@ const HomeFromHome = () => {
         </h2>
       </div>
 
-      <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 gap-8 container__two mt-8">
+      <div className="grid w-full lg:grid-cols-2 gap-4 container__two mt-8">
         {details?.map((item, i) => (
           <HousingCard
             key={i + 1}
