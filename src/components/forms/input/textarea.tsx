@@ -8,13 +8,25 @@ interface Props {
   name: string;
   required?: boolean;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   disabled?: boolean;
   className?: string;
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
-  ({ name, label, required, placeholder, disabled, className }, ref) => {
+  (
+    {
+      name,
+      label,
+      required,
+      placeholder,
+      disabled,
+      className,
+      onChange,
+      value,
+    },
+    ref
+  ) => {
     const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
     useImperativeHandle(ref, () => textAreaRef.current!);
@@ -32,6 +44,9 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
             className
           )}
           ref={textAreaRef}
+          name={name}
+          onChange={onChange}
+          value={value}
         />
       </div>
     );

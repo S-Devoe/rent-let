@@ -1,7 +1,11 @@
+"use client";
 import { LocationIcon } from "@/components/icons/icon";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 const HomeStay = () => {
+  const router = useRouter();
   return (
     <section className="w-full flex justify-center items-center flex-col p-6">
       <div className="container__two">
@@ -15,7 +19,11 @@ const HomeStay = () => {
 
       <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 gap-8 container__two mt-8">
         {arr?.map((item, i) => (
-          <div key={i + 1} className="">
+          <div
+            key={i + 1}
+            onClick={() => router.push("/residence")}
+            className="cursor-pointer"
+          >
             <Image
               src={item.image}
               alt={item.location}
@@ -38,19 +46,17 @@ export default HomeStay;
 
 const arr = [
   {
-    location: "Okoyi, Lagos",
-    image: "/home/location.jpg",
+    location: "Chicago, Illinos",
+    image: "/images/haven-homes/chicago_illonis/image/pic2.jpg",
   },
   {
-    location: "Lagos Island, Lagos",
-    image: "/home/location.jpg",
+    location: "Key, West Florida",
+    image:
+      "/images/haven-homes/key_west_florida/silver_palm_inn_key_west/pic2.jpg",
   },
   {
-    location: "Lekki, Lagos",
-    image: "/home/location.jpg",
-  },
-  {
-    location: "Yaba, Lagos",
-    image: "/home/location.jpg",
+    location: "Las Vegas, Florida",
+    image:
+      "/images/haven-homes/las_vegas_nevada/luxirious and private/pic9.jpg",
   },
 ];

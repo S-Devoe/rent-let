@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Button } from "../ui/button";
 import { Bath, BedOutline, LocationIcon, ToolKitchen } from "../icons/icon";
 import Link from "next/link";
 
 interface Props {
-  image: string;
+  image: string | StaticImageData;
   location: string;
   bedrooms: number;
   bathrooms: number;

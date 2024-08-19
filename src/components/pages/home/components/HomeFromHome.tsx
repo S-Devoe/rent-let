@@ -1,5 +1,5 @@
 import HousingCard from "@/components/cards/house-card";
-import { generateUniqueId } from "@/lib/utils";
+import { apartmentData } from "@/data/data";
 
 const HomeFromHome = () => {
   return (
@@ -14,13 +14,13 @@ const HomeFromHome = () => {
       </div>
 
       <div className="grid w-full lg:grid-cols-2 gap-4 container__two mt-8">
-        {details?.map((item, i) => (
+        {apartmentData?.map((item, i) => (
           <HousingCard
             key={i + 1}
             bathrooms={item?.bathrooms}
             bedrooms={item?.bedrooms}
             name={item?.name}
-            image={item?.image}
+            image={item?.images[0]}
             kitchen={item?.kitchen}
             location={item?.location}
             price={item?.price}
@@ -33,14 +33,3 @@ const HomeFromHome = () => {
 };
 
 export default HomeFromHome;
-
-export const details = Array(4).fill({
-  name: "Residence",
-  location: "Lagos, Nigeria",
-  bedrooms: 3,
-  bathrooms: 2,
-  kitchen: 1,
-  price: "From ₦ 500,000",
-  image: "/home/location.jpg",
-  id: generateUniqueId(),
-});

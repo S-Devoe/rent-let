@@ -116,3 +116,11 @@
   z-index: 1;
   box-shadow: inset 0 0 0 2000px rgba(68, 57, 57, 0.603);
 }
+
+.form_header {
+  @apply text-lg lg:text-xl font-semibold text-black;
+}
+
+.form_drescription {
+  @apply text-sm font-medium text-gray-500;
+}

@@ -1,7 +1,6 @@
 import HousingCard from "@/components/cards/house-card";
-import React from "react";
-import { details } from "../home/components/HomeFromHome";
 import { HomeModern } from "@/components/icons/icon";
+import { apartmentData } from "@/data/data";
 
 const ResidenceHomes = () => {
   return (
@@ -11,18 +10,18 @@ const ResidenceHomes = () => {
           <span>
             <HomeModern className="text-primary" />
           </span>
-          {details?.length} residence available
+          {apartmentData?.length} residence available
         </h2>
       </div>
 
-      <div className="grid w-full  md:grid-cols-2 lg:grid-cols-3 gap-8 container__two mt-8">
-        {details?.map((item, i) => (
+      <div className="grid w-full  md:grid-cols-2 gap-4 container__two mt-8">
+        {apartmentData?.map((item, i) => (
           <HousingCard
             key={i + 1}
             bathrooms={item?.bathrooms}
             bedrooms={item?.bedrooms}
             name={item?.name}
-            image={item?.image}
+            image={item?.images[0]}
             kitchen={item?.kitchen}
             location={item?.location}
             price={item?.price}

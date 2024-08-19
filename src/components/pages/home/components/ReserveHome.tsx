@@ -62,7 +62,7 @@ function FormSection() {
       description: descriptionRef.current?.value,
     };
 
-    console.log(values);
+
   };
 
   return (

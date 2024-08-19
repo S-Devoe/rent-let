@@ -41,8 +41,6 @@ function FormSection() {
       subject: subjectRef.current?.value,
       message: descriptionRef.current?.value,
     };
-
-    console.log(values);
   };
   const inputClassName =
     "h-[2.5rem] lg:h-[3.125rem] p-[10px] rounded text-base";

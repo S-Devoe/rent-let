@@ -54,6 +54,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
             className
           )}
           ref={inputRef}
+          name={name}
         />
       </div>
     );
