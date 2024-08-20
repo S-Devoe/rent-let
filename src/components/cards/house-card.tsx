@@ -63,7 +63,9 @@ const HousingCard = ({
             <Button variant="outline" asChild>
               <Link href={`/residence/${id}`}>View More Details </Link>
             </Button>
-            <Button>Book Now</Button>
+            <Button asChild>
+              <Link href={`/book/${id}`}>Book Now </Link>
+            </Button>
           </div>
         </div>
       </div>
@@ -75,7 +77,9 @@ const HousingCard = ({
           <Button variant="outline" asChild>
             <Link href={`/residence/${id}`}>View More Details </Link>
           </Button>
-          <Button>Book Now</Button>
+          <Button asChild>
+            <Link href={`/book/${id}`}>Book Now </Link>
+          </Button>
         </div>
       </div>
     </div>

@@ -9,8 +9,17 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { apartmentData } from "@/data/data";
 import { calculateDaysBetweenDates, cn, formatDate } from "@/lib/utils";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import {
+  Dispatch,
+  FormEvent,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { DateRange } from "react-day-picker";
 
 interface FormData {
@@ -43,7 +52,6 @@ const BookApartment = () => {
     email: "",
     phone: "",
   });
-
 
   const handleInputChange: StepProps["handleInputChange"] = (e) => {
     const { name, value } = e.target;
@@ -111,14 +119,18 @@ const BookApartment = () => {
       id: 3,
     },
   ];
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log(formData);
+  };
 
   return (
-    <section className="h-screen w-full flex justify-center pt-[10rem]">
+    <section className="h-screen w-full flex justify-center pt-[10rem] px-6">
       <div className="w-full max-w-[50rem]">
         <div className="flex items-center justify-between mb-4">
           {stepHeader?.map((header) => (
             <div
-              className={`p-2 flex items-center gap-2 font-semibold text-base  ${
+              className={`p-2 flex flex-col md:flex-row justify-center items-center gap-2 font-semibold text-xs md:text-base  ${
                 header?.id <= currentStep
                   ? "text-black cursor-pointer"
                   : "text-primary/80"
@@ -131,17 +143,17 @@ const BookApartment = () => {
               }}
             >
               <span
-                className={`size-6 ${
+                className={`size-4 md:size-6 text-xs md:text-base shrink-0 ${
                   currentStep < header?.id ? "bg-primary/50 " : "bg-primary"
                 }  text-white flex items-center justify-center rounded-full`}
               >
                 {header?.id}
               </span>
-              {header?.text}
+              <p className="text-center" >{header?.text}</p>
             </div>
           ))}
         </div>
-        <form>
+        <form onSubmit={onSubmit}>
           {renderStep(
             currentStep,
             formData,
@@ -265,7 +277,6 @@ const FormStep2 = ({
     );
   };
 
-
   return (
     <div className="w-full">
       <div className="mb-4">
@@ -331,8 +342,73 @@ const FormStep2 = ({
   );
 };
 
-const FormStep3 = ({ formData, handleInputChange }: StepProps) => (
-  <div>
-    <h2>Step 1: Check-in and Check-out Dates</h2>
-  </div>
-);
+const FormStep3 = ({ formData, handleInputChange }: StepProps) => {
+  const { id } = useParams();
+  const apartment = apartmentData.find((apartment) => apartment.id === id);
+
+  if (!apartment) {
+    return (
+      <div className="mt-6 text-black text-base">
+        Please select an apartment
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full">
+      <div className="mb-4">
+        <h2 className="form_header">Confirm your booking</h2>
+        <p className="form_drescription">Please confirm your booking below</p>
+      </div>
+      <div className="w-full flex flex-col md:flex-row gap-4 md:items-center justify-between">
+        <div className="flex gap-2 items-center">
+          <Image
+            src={apartment.images[0]}
+            alt="img"
+            height={200}
+            width={200}
+            className="h-[100px] w-[150px] rounded "
+          />
+          <div className="font-medium">
+            <h2 className="text-base text-black font-semibold">
+              {apartment.name}
+            </h2>
+            <h3 className="text-sm text-black">
+              {calculateDaysBetweenDates(formData.checkin, formData.checkout)}{" "}
+              Night
+            </h3>
+            <h3 className="text-sm text-black">
+              {formatDate(formData.checkin, "DD MMMM, YYYY")} -{" "}
+              {formatDate(formData.checkout, "DD MMMM, YYYY")}
+            </h3>
+          </div>
+        </div>
+        <div className="font-bold text-lg text-black">{apartment.price}</div>
+      </div>
+      <div className="border-t border-gray-300 w-full mt-6 space-y-4 py-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xl">Sub Total</h3>
+          <h3 className="text-xl">
+            $
+            {calculateDaysBetweenDates(formData.checkin, formData.checkout) *
+              500}
+          </h3>
+        </div>
+        <div className="flex items-center justify-between">
+          <h3 className="text-2xl font-semibold">Total</h3>
+          <h3 className="text-2xl font-semibold">
+            $
+            {calculateDaysBetweenDates(formData.checkin, formData.checkout) *
+              500}
+          </h3>
+        </div>
+      </div>
+      <Button
+        type="submit"
+        className="w-full px-5 text-base font-semibold mt-4"
+      >
+        Make Reservation
+      </Button>
+    </div>
+  );
+};

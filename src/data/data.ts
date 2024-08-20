@@ -6,7 +6,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/chicago_illonis/image/pic1.jpg",
       "/images/haven-homes/chicago_illonis/image/pic2.jpg",
@@ -23,7 +23,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/key_west_florida/authors_of_key_west_guest/pic1.jpg",
       "/images/haven-homes/key_west_florida/authors_of_key_west_guest/pic2.jpg",
@@ -41,7 +41,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/key_west_florida/santa_maria_suites/pic1.jpg",
       "/images/haven-homes/key_west_florida/santa_maria_suites/pic2.jpg",
@@ -59,7 +59,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/key_west_florida/silver_palm_inn_key_west/pic1.jpg",
       "/images/haven-homes/key_west_florida/silver_palm_inn_key_west/pic2.jpg",
@@ -76,7 +76,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/las_vegas_nevada/luxirious and private/pic1.jpg",
       "/images/haven-homes/las_vegas_nevada/luxirious and private/pic2.jpg",
@@ -95,7 +95,7 @@ export const apartmentData = [
     bedrooms: 3,
     bathrooms: 2,
     kitchen: 1,
-    price: "From $500",
+    price: "$500",
     images: [
       "/images/haven-homes/las_vegas_nevada/resort-style-paradise/pic1.jpg",
       "/images/haven-homes/las_vegas_nevada/resort-style-paradise/pic2.jpg",

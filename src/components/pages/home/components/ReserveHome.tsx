@@ -14,9 +14,7 @@ const ReserveHome = () => {
             {/* address  */}
             <div className="flex items-center gap-2">
               <LocationIcon className="text-primary size-5" />
-              <p className="text-black font-medium text-base">
-                Haven Homes, Lagos, Nigeria
-              </p>
+              <p className="text-black font-medium text-base">Haven Homes</p>
             </div>
             {/* tel   */}
             <div className="flex items-center gap-2">
@@ -61,8 +59,6 @@ function FormSection() {
       guests: guestRef.current?.value,
       description: descriptionRef.current?.value,
     };
-
-
   };
 
   return (
