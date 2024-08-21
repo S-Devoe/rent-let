@@ -149,7 +149,7 @@ const BookApartment = () => {
               >
                 {header?.id}
               </span>
-              <p className="text-center" >{header?.text}</p>
+              <p className="text-center">{header?.text}</p>
             </div>
           ))}
         </div>
@@ -345,6 +345,15 @@ const FormStep2 = ({
 const FormStep3 = ({ formData, handleInputChange }: StepProps) => {
   const { id } = useParams();
   const apartment = apartmentData.find((apartment) => apartment.id === id);
+  const subTotal = () => {
+    if (!!apartment) {
+      return (
+        calculateDaysBetweenDates(formData.checkin, formData.checkout) *
+        apartment.subtotal
+      );
+    }
+    return 0;
+  };
 
   if (!apartment) {
     return (
@@ -388,19 +397,11 @@ const FormStep3 = ({ formData, handleInputChange }: StepProps) => {
       <div className="border-t border-gray-300 w-full mt-6 space-y-4 py-4">
         <div className="flex items-center justify-between">
           <h3 className="text-xl">Sub Total</h3>
-          <h3 className="text-xl">
-            $
-            {calculateDaysBetweenDates(formData.checkin, formData.checkout) *
-              500}
-          </h3>
+          <h3 className="text-xl">${subTotal()}</h3>
         </div>
         <div className="flex items-center justify-between">
           <h3 className="text-2xl font-semibold">Total</h3>
-          <h3 className="text-2xl font-semibold">
-            $
-            {calculateDaysBetweenDates(formData.checkin, formData.checkout) *
-              500}
-          </h3>
+          <h3 className="text-2xl font-semibold">${subTotal()}</h3>
         </div>
       </div>
       <Button

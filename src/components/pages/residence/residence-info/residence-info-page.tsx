@@ -18,7 +18,7 @@ const ResidenceInfoPage = () => {
   return (
     <main className="space-y-10 lg:space-y-40">
       <ResidenceInfoHero apartment={apartment} />
-      <ResidenceAmenities />
+      <ResidenceAmenities apartment={apartment} />
       <ReserveHome />
     </main>
   );

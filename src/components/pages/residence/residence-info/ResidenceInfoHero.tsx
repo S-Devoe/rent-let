@@ -1,17 +1,9 @@
 import { SolidLocation } from "@/components/icons/icon";
+import { ApartmentI } from "@/types";
 import Image from "next/image";
 
 interface Props {
-  apartment: {
-    id: string;
-    name: string;
-    location: string;
-    bedrooms: number;
-    bathrooms: number;
-    kitchen: number;
-    price: string;
-    images: string[];
-  };
+  apartment: ApartmentI
 }
 
 const ResidenceInfoHero = ({ apartment }: Props) => {

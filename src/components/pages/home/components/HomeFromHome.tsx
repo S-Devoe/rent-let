@@ -17,14 +17,13 @@ const HomeFromHome = () => {
         {apartmentData?.map((item, i) => (
           <HousingCard
             key={i + 1}
-            bathrooms={item?.bathrooms}
             bedrooms={item?.bedrooms}
             name={item?.name}
             image={item?.images[0]}
-            kitchen={item?.kitchen}
             location={item?.location}
             price={item?.price}
             id={item?.id}
+            maxGuests={item?.maxGuests}
           />
         ))}
       </div>

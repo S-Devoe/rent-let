@@ -3,8 +3,10 @@ export interface ApartmentI {
   name: string;
   location: string;
   bedrooms: number;
-  bathrooms: number;
-  kitchen: number;
   price: string;
+  subtotal: number;
   images: string[];
+  amenities: string[];
+  description: string;
+  maxGuests: number;
 }

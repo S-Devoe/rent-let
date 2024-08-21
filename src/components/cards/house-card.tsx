@@ -1,24 +1,22 @@
 import Image, { StaticImageData } from "next/image";
 import { Button } from "../ui/button";
-import { Bath, BedOutline, LocationIcon, ToolKitchen } from "../icons/icon";
+import { Bath, BedOutline, LocationIcon, ToolKitchen, UsersGroup } from "../icons/icon";
 import Link from "next/link";
 
 interface Props {
   image: string | StaticImageData;
   location: string;
   bedrooms: number;
-  bathrooms: number;
-  kitchen: number;
+  maxGuests: number;
   name: string;
   price: string;
   id: string | number;
 }
 
 const HousingCard = ({
-  bathrooms,
+  maxGuests,
   bedrooms,
   image,
-  kitchen,
   location,
   name,
   price,
@@ -49,10 +47,7 @@ const HousingCard = ({
               {bedrooms}
             </span>
             <span className="text-sm flex items-center gap-1 ">
-              <Bath className="text-primary size-4" /> Bathrooms: {bathrooms}
-            </span>
-            <span className="text-sm flex items-center gap-1 ">
-              <ToolKitchen className="text-primary size-4" /> Kitchen: {kitchen}
+              <UsersGroup className="text-primary size-4" /> Guests: {maxGuests}
             </span>
           </div>
 

@@ -22,11 +22,11 @@ const HeaderOne = () => {
       link: "/residence",
       isActive: pathname?.startsWith("/residence"),
     },
-    {
-      title: "Beach House",
-      link: "/beach-house",
-      isActive: pathname?.startsWith("/beach-house"),
-    },
+    // {
+    //   title: "Beach House",
+    //   link: "/beach-house",
+    //   isActive: pathname?.startsWith("/beach-house"),
+    // },
     {
       title: "Contact Us",
       link: "/contact",
@@ -50,7 +50,7 @@ const HeaderOne = () => {
           className="md:hidden"
           type="button"
           onClick={() => setOpenDrawer(true)}
-          aria-label='open menu'
+          aria-label="open menu"
         >
           <HamburgerMenu className="size-6 text-black md:hidden" />
         </button>

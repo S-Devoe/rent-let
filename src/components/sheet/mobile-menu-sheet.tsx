@@ -9,8 +9,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/images/haven-logo.png";
-import CloseIcon from "../icons/icon";
 import { usePathname } from "next/navigation";
+import { CloseIcon } from "../icons/icon";
 
 interface Props {
   open: boolean;

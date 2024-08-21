@@ -282,7 +282,7 @@ export function HamburgerMenu(props: IconProps) {
   );
 }
 
-export default function CloseIcon(props: IconProps) {
+export function CloseIcon(props: IconProps) {
   return (
     <svg
       fill="currentColor"
@@ -294,6 +294,31 @@ export default function CloseIcon(props: IconProps) {
       {...props}
     >
       <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34Z"></path>
+    </svg>
+  );
+}
+
+export function UsersGroup(props: IconProps) {
+  return (
+    <svg
+      fill="none"
+      strokeWidth="2"
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+      <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+      <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+      <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+      <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+      <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
     </svg>
   );
 }

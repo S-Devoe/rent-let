@@ -1,19 +1,24 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { generateUniqueId } from "@/lib/utils";
+import { ApartmentI } from "@/types";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-const ResidenceAmenities = () => {
+interface Props {
+  apartment: ApartmentI;
+}
+const ResidenceAmenities = ({ apartment }: Props) => {
   const { id } = useParams();
-  
+
   return (
-    <section className="w-full flex justify-center p-6">
+    <section className="w-full flex flex-col gap-5 p-6">
+      <p className="text-sm text-black">{apartment.description}</p>
       <section className="flex flex-col gap-2 container__two">
-        {amenities?.map((item) => (
-          <div className="flex items-center gap-3" key={item?.id}>
+        {apartment?.amenities?.map((item, i) => (
+          <div className="flex items-center gap-3" key={`${item}+${i + 1}`}>
             <span className="size-2 rounded-full bg-primary" />
-            <p className="text-black font-semibold text-base">{item.amenity}</p>
+            <p className="text-black font-semibold text-base">{item}</p>
           </div>
         ))}
         <Button className="w-fit px-10 text-base rounded-lg mt-3" asChild>
@@ -25,30 +30,3 @@ const ResidenceAmenities = () => {
 };
 
 export default ResidenceAmenities;
-
-const amenities = [
-  {
-    id: generateUniqueId(),
-    amenity: "Free wifi",
-  },
-  {
-    id: generateUniqueId(),
-    amenity: "Air Conditioning and Water Heater",
-  },
-  {
-    id: generateUniqueId(),
-    amenity: "Living Room Area.",
-  },
-  {
-    id: generateUniqueId(),
-    amenity: "TV and Entertainment",
-  },
-  {
-    id: generateUniqueId(),
-    amenity: "Kitchen",
-  },
-  {
-    id: generateUniqueId(),
-    amenity: "Free Parking",
-  },
-];
