@@ -52,6 +52,19 @@ const Footer = () => {
             </Link>
           ))}
         </div>
+        <a
+          href="https://freekassa.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="https://cdn.freekassa.com/banners/big-dark-1.png"
+            title="Receving payments on the site for individuals, etc."
+            alt="freekassa"
+            width={150}
+            height={150}
+          />
+        </a>
       </div>
     </footer>
   );

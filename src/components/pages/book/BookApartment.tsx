@@ -38,11 +38,11 @@ interface StepProps {
   handleInputChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
-  setCurrentStage: Dispatch<SetStateAction<number>>;
+  setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
 const BookApartment = () => {
-  const [currentStep, setCurrentStage] = useState<number>(1);
+  const [currentStep, setCurrentStep] = useState<number>(1);
   const [formData, setFormData] = useState<FormData>({
     checkin: "",
     checkout: "",
@@ -66,7 +66,7 @@ const BookApartment = () => {
     formData: FormData,
     handleInputChange: StepProps["handleInputChange"],
     setFormData: Dispatch<SetStateAction<FormData>>,
-    setCurrentStage: Dispatch<SetStateAction<number>>
+    setCurrentStep: Dispatch<SetStateAction<number>>
   ) => {
     switch (currentStep) {
       case 1:
@@ -75,7 +75,7 @@ const BookApartment = () => {
             formData={formData}
             handleInputChange={handleInputChange}
             setFormData={setFormData}
-            setCurrentStage={setCurrentStage}
+            setCurrentStep={setCurrentStep}
           />
         );
       case 2:
@@ -83,7 +83,7 @@ const BookApartment = () => {
           <FormStep2
             formData={formData}
             handleInputChange={handleInputChange}
-            setCurrentStage={setCurrentStage}
+            setCurrentStep={setCurrentStep}
           />
         );
       case 3:
@@ -91,7 +91,7 @@ const BookApartment = () => {
           <FormStep3
             formData={formData}
             handleInputChange={handleInputChange}
-            setCurrentStage={setCurrentStage}
+            setCurrentStep={setCurrentStep}
           />
         );
       default:
@@ -99,7 +99,7 @@ const BookApartment = () => {
           <FormStep1
             formData={formData}
             handleInputChange={handleInputChange}
-            setCurrentStage={setCurrentStage}
+            setCurrentStep={setCurrentStep}
           />
         );
     }
@@ -139,8 +139,9 @@ const BookApartment = () => {
               }  `}
               key={header?.id}
               onClick={() => {
-                header?.id <= currentStep && setCurrentStage(header?.id);
+                header?.id <= currentStep && setCurrentStep(header?.id);
               }}
+              role="button"
             >
               <span
                 className={`size-4 md:size-6 text-xs md:text-base shrink-0 ${
@@ -159,7 +160,7 @@ const BookApartment = () => {
             formData,
             handleInputChange,
             setFormData,
-            setCurrentStage
+            setCurrentStep
           )}
         </form>
       </div>
@@ -173,7 +174,7 @@ const FormStep1 = ({
   formData,
   handleInputChange,
   setFormData,
-  setCurrentStage,
+  setCurrentStep,
 }: StepProps) => {
   const [date, setDate] = useState<any>();
 
@@ -249,7 +250,7 @@ const FormStep1 = ({
         disabled={!Boolean(formData?.checkout)}
         type="button"
         className="w-full px-5 text-base font-semibold mt-8"
-        onClick={() => setCurrentStage(2)}
+        onClick={() => setCurrentStep(2)}
       >
         Proceed
       </Button>
@@ -260,7 +261,7 @@ const FormStep1 = ({
 const FormStep2 = ({
   formData,
   handleInputChange,
-  setCurrentStage,
+  setCurrentStep,
 }: StepProps) => {
   const inputClassName =
     "h-[2.5rem] lg:h-[3.125rem] p-[10px] rounded text-base";
@@ -334,7 +335,7 @@ const FormStep2 = ({
         disabled={!isFormComplete()}
         type="button"
         className="w-full px-5 text-base font-semibold mt-8"
-        onClick={() => setCurrentStage(3)}
+        onClick={() => setCurrentStep(3)}
       >
         Proceed
       </Button>
