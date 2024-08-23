@@ -1,7 +1,7 @@
 "use client";
 import Input from "@/components/forms/input/input";
 import Textarea from "@/components/forms/input/textarea";
-import { HeadsetIcon, LocationIcon, Mail02Icon } from "@/components/icons/icon";
+import { HeadsetIcon, LocationIcon } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { FormEvent, useRef } from "react";
 
@@ -20,14 +20,7 @@ const ReserveHome = () => {
             <div className="flex items-center gap-2">
               <HeadsetIcon className="text-primary size-5" />
               <p className="text-black font-medium text-base">
-                +234 123 456 7890
-              </p>
-            </div>
-            {/* mail  */}
-            <div className="flex items-center gap-2">
-              <Mail02Icon className="text-primary size-5" />
-              <p className="text-black font-medium text-base">
-                name@example.com
+                +1 (706) 784-2896
               </p>
             </div>
           </div>
